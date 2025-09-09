@@ -1,7 +1,7 @@
 # VI XỬ LÝ - VI ĐIỀU KHIỂN (TN)
-GVHD: TÔN HUỲNH LONG
-SV: Nguyễn Hảo Khang
-MSSV: 2311444
+* GVHD: TÔN HUỲNH LONG
+* SV: Nguyễn Hảo Khang
+* MSSV: 2311444
 
 ---
 
