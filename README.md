@@ -19,7 +19,7 @@ Các dự án được tổ chức theo từng chương và bài lab, giúp gi�
 ---
 
 ## Cách thức mô phỏng
-Để đánh giá các bài lab có thể làm theo các bước sau:
+Để thực hiện mô phỏng các bài thực hành, người dùng có thể làm theo các bước sau:
 1.  **Clone kho lưu trữ:** Clone toàn bộ kho lưu trữ về máy tính.
 2.  **Mở dự án:**
     * Mở file `.ioc` trong thư mục dự án bằng **STM32CubeIDE**.
