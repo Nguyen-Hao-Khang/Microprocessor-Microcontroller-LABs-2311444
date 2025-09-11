@@ -1,0 +1,50 @@
+  int vredTR = 4, vgreTR = 2, vyelTR = 1;
+  int hredTR = 4, hgreTR = 2, hyelTR = 1;
+  while (1)
+  {
+	  if (vredTR >= 0)
+	  {
+		  HAL_GPIO_WritePin(LED_RED_Y_GPIO_Port, LED_RED_Y_Pin, SET);
+		  HAL_GPIO_WritePin(LED_YEL_Y_GPIO_Port, LED_YEL_Y_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_GRE_Y_GPIO_Port, LED_GRE_Y_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_RED_X_GPIO_Port, LED_RED_X_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_YEL_X_GPIO_Port, LED_YEL_X_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_GRE_X_GPIO_Port, LED_GRE_X_Pin, SET);
+		  display7SEG(vredTR--);
+		  hgreTR--;
+		  if (hgreTR < 0)
+		  {
+			  hyelTR--;
+			  HAL_GPIO_WritePin(LED_RED_X_GPIO_Port, LED_RED_X_Pin, RESET);
+			  HAL_GPIO_WritePin(LED_YEL_X_GPIO_Port, LED_YEL_X_Pin, SET);
+			  HAL_GPIO_WritePin(LED_GRE_X_GPIO_Port, LED_GRE_X_Pin, RESET);
+		  }
+	  }
+	  else if (vgreTR >= 0)
+	  {
+		  HAL_GPIO_WritePin(LED_RED_X_GPIO_Port, LED_RED_X_Pin, SET);
+		  HAL_GPIO_WritePin(LED_YEL_X_GPIO_Port, LED_YEL_X_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_GRE_X_GPIO_Port, LED_GRE_X_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_RED_Y_GPIO_Port, LED_RED_Y_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_YEL_Y_GPIO_Port, LED_YEL_Y_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_GRE_Y_GPIO_Port, LED_GRE_Y_Pin, SET);
+		  display7SEG(vgreTR--);
+		  hredTR--;
+	  } else {
+		  HAL_GPIO_WritePin(LED_RED_Y_GPIO_Port, LED_RED_Y_Pin, RESET);
+		  HAL_GPIO_WritePin(LED_YEL_Y_GPIO_Port, LED_YEL_Y_Pin, SET);
+		  HAL_GPIO_WritePin(LED_GRE_Y_GPIO_Port, LED_GRE_Y_Pin, RESET);
+		  display7SEG(vyelTR--);
+		  hredTR--;
+	  }
+	  if (hredTR < 0)
+	  {
+		  vredTR = 4;
+		  vyelTR = 1;
+		  vgreTR = 2;
+		  hredTR = 4;
+		  hyelTR = 1;
+		  hgreTR = 2;
+	  }
+	  HAL_Delay(1000);
+  }
