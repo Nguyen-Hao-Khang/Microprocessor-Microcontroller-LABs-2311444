@@ -1,0 +1,7 @@
+void clearNumberOnClock(int num)
+{
+	  if (num >= 0 && num <= 11)
+	  {
+		  HAL_GPIO_WritePin(GPIOA, ledPins[num], RESET);
+	  }
+}
