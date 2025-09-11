@@ -1,0 +1,15 @@
+  int counter = 2;
+  HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, RESET);
+  HAL_GPIO_WritePin(LED_YEL_GPIO_Port, LED_YEL_Pin, SET);
+  while (1)
+  {
+	  // TODO
+	  counter--;
+	  if (counter <= 0)
+	  {
+		  counter = 2;
+		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+		  HAL_GPIO_TogglePin(LED_YEL_GPIO_Port, LED_YEL_Pin);
+	  }
+	  HAL_Delay(1000);
+  }
