@@ -24,3 +24,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		if (NUM_DISPLAY > 2) NUM_DISPLAY = 1;
 	}
 }
+
+
+
+
+The frequency of the scan is 1 Hz. Since there are two LEDs and each LED is on for 0.5 seconds, the total scan period is 1 second. So the frequency is: freq = 1 / T = 1 / 1 = 1 (Hz)
