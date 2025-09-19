@@ -125,7 +125,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 6, minute = 12, second = 25;
+  int hour = 0, minute = 0, second = 0;
   int prev_hour = -1, prev_minute = -1, prev_second = -1;
   int curr_hour, curr_minute, curr_second;
   clearAllClock();
@@ -184,7 +184,7 @@ int main(void)
       {
           hour = 0;
       }
-      HAL_Delay(1000);
+      HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
